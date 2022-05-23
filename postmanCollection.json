@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "94b4274f-4ca1-4201-a64a-42205a2cee00",
+		"name": "nodejs test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13773895"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/home/zorin/Desktop/nodejsAssignment/sampleMarks.csv"
+					}
+				},
+				"url": {
+					"raw": "{{url}}/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students/1/result",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{url}}/students/1/result",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"students",
+						"1",
+						"result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/students?resultStatus=passed/failed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{url}}/students?resultStatus=passed/failed",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"students"
+					],
+					"query": [
+						{
+							"key": "resultStatus",
+							"value": "passed/failed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:4000",
+			"type": "string"
+		}
+	]
+}
